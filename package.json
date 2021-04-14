@@ -2,7 +2,9 @@
   "name": "facerecognitionbrain",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://moshehak100.github.io/smart-brain",
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-particles-js": "^3.4.1",
@@ -11,12 +13,13 @@
     "tachyons": "^4.12.0"
   },
   "scripts": {
-    
     "start": "react-scripts start",
     "start:dev": "set PORT=3006 & react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
